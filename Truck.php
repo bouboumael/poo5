@@ -27,7 +27,7 @@ class Truck extends Vehicle
             return 'Full';
         }
     }
-    
+
     public function getStockageCapacity(): int
     {
         return $this->stockageCapacity;

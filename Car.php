@@ -2,7 +2,7 @@
 
 require_once 'Vehicle.php';
 
-class Car extends Vehicle
+class Car extends Vehicle implements LightableInterface
 {
     //POO 4
     private bool $hasParkBrake = true;
@@ -38,5 +38,15 @@ class Car extends Vehicle
             echo "Homer says: My car rolls like a donut";
             return parent::start();
         }
+    }
+
+    public function switchOn(): bool
+    {
+        return true;
+    }
+
+    public function switchOff(): bool
+    {
+        return false;
     }
 }
