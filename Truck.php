@@ -1,8 +1,9 @@
 <?php
 
 require_once 'Vehicle.php';
+require_once 'LightableInterface.php';
 
-class Truck extends Vehicle
+class Truck extends Vehicle implements LightableInterface
 {
 
     private int $stockageCapacity;
@@ -46,5 +47,15 @@ class Truck extends Vehicle
     public function setLoading(int $loading): void
     {
         $this->loading = $loading;
+    }
+
+    public function switchOn(): bool
+    {
+        return true;
+    }
+
+    public function switchOff(): bool
+    {
+        return false;
     }
 }
